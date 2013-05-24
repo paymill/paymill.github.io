@@ -1,0 +1,122 @@
+// This is so damn ugly - sorry for that
+/** {
+    font-family: 'SourceSansPro', 'Helvetica', sans-serif;
+}*/
+
+// BOOTSTRAP-SELECT - using this to style bootstrap-select Plugin Button-caret
+.sidebar .bootstrap-select {
+    button{
+        color:@textColor;
+        text-shadow:none;
+        span.caret {
+            right:0px!important;
+            margin:0px;
+            padding:0px;
+            height:100%;
+            width:24px;
+            //height:28px;
+            border:none;
+            background:@ci-grey6;
+            border-left:1px solid @borderColor;
+            background-clip:content-box;
+            .border-radius-complex(3px,3px,0,0);
+            top:0px;
+            &:after{
+                content:"";
+                display:block;
+                width:100%;
+                height:100%;
+                background: transparent url(../img/glyphicons-halflings.png) no-repeat;
+                background-position: -308px -110px;
+            }
+        }
+    }
+    &.open .btn.dropdown-toggle{
+        background-color:transparent;
+    }
+}
+
+// HEADER FIXING THIS TO GET THE OLD LOOK
+#Header {
+    font-family: OpenSans, "Helvetica Neue", Helvetica, sans-serif;
+    color:#333;
+    font-size:13px;
+
+    .container {
+        height:100px;
+    }
+
+}
+
+// FOOTER FIXING TO GET THE OLD LOOK
+#Footer {
+
+    font-family: "OpenSans", "Helvetica Neue", Helvetica, sans-serif;
+
+    >.container>.upper {
+        background:#4A4A4A;
+    }
+
+    h5 {
+        margin:0 0 10px 0;
+        font-size:11px;
+        font-weight:700;
+        text-transform:uppercase;
+        color:#F6F6F6;
+    }
+
+    p {
+        color:#999999;
+        line-height:20px;
+    }
+
+    .listing .footer-navigation-module ul li a{
+        color:#999!important;
+        &:hover, &:active {
+            color:@ci-orange!important;
+        }
+    }
+    .listing .footer-navigation-module .menu-footer-container .level1 > li.separator > span {
+        color:#F6F6F6!important;
+    }
+
+    .listing {
+        float: left;
+        margin-left: 0px;
+        width: 175px;
+
+        ul {
+            margin: 0;
+
+            li {
+                list-style-image: url('../img/arrow_small.png');
+                list-style-position: inside;
+                border-top: 1px solid #5E5E5E!important;
+                border-bottom: 1px solid #363636!important;
+
+            } // li
+
+            li:first-child {
+                border-top: none!important;
+            } // &.first
+
+            li:last-child {
+                border-bottom: none!important;
+            } // &.last
+
+        } // ul
+
+    } // .listing
+
+}
+
+// NO TOP MARGIN!
+.ntm {
+    margin-top: 0 !important;
+}
+
+// BOX BACKGROUND LIGHT
+.box-background-light {
+    background: @white!important;
+}
+

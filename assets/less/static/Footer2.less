@@ -1,0 +1,146 @@
+#Footer2 {
+  padding-top: 100px;
+
+  .getintouch {
+    background:transparent;
+    border-top:1px solid @borderColor;
+    height:100px;
+    .social {
+      a {
+        color: @textColor;
+        display:inline-block;
+        height:100px;
+        line-height: 100px;
+        margin-right: 40px;
+        &.twitter{
+          &:hover:before{
+            background-color: #00acee; //twitter blue
+            .transition(all 500ms ease);
+          }
+          &:before{
+            content:"";
+            display: inline-block;
+            margin-bottom:-5px;
+            width:20px;
+            height:20px;
+            margin-right: 10px;
+            background:@ci-orange url(../img/social-icons-footer-sprite.png) no-repeat 0 0;
+            background-color: @ci-grey5;
+            .border-radius(100%);
+            .transition(all 500ms ease);
+          }
+        }
+        &.facebook{
+          &:hover:before{
+            background-color: #3b5998; //facebook blue
+            .transition(all 500ms ease);
+          }
+          &:before{
+            content:"";
+            display: inline-block;
+            margin-bottom:-5px;
+            width:20px;
+            height:20px;
+            margin-right: 10px;
+            background:@ci-orange url(../img/social-icons-footer-sprite.png) no-repeat -30px 0;
+            background-color: @ci-grey5;
+            .border-radius(100%);
+            .transition(all 500ms ease);
+          }
+        }
+        &.blog{
+          &:hover:before{
+            background-color: @ci-orange;
+            .transition(all 500ms ease);
+          }
+          &:before{
+            content:"";
+            display: inline-block;
+            margin-bottom:-5px;
+            width:20px;
+            height:20px;
+            margin-right: 10px;
+            background:@ci-orange url(../img/social-icons-footer-sprite.png) no-repeat -60px 0;
+            background-color: @ci-grey5;
+            .transition(all 500ms ease);
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    height:100px;
+    margin-left:10px;
+    border-left: 1px solid @borderColor;
+    .airmail {
+      position: relative;
+      width: 470px;
+      height:33px; // optical center the button below
+      background: transparent url(../img/divider-airmail.png) repeat-x;
+    }
+  }
+
+  .selected {
+    padding-top: 50px;
+    border-top: 1px solid @ci-grey1;
+    background:@ci-grey2;
+    width:100%;
+
+    nav ul {
+      margin-left: 0px;
+      color:@ci-grey3;
+      display:block;
+      float:left;
+      overflow:hidden;
+      margin-bottom: 0px;
+      text-align:left;
+      .transition(color 200ms ease);
+
+      &:hover {
+        color:@ci-grey4;
+        .transition(color 1500ms ease);
+      }
+
+      li {
+        list-style: none;
+        &.section {
+          font-size: 18px;
+          height: 33px;
+        }
+        a {
+          color:@ci-grey4;
+          display:block;
+          min-height: 30px;
+          .transition(color 200ms ease);
+          &:hover {
+            color:@ci-grey5;
+            .transition(color 200ms ease);
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    padding: 0px;
+    background:@ci-grey2;
+    color:@ci-grey3;
+    .footerlogo {
+      margin:75px 0 50px;
+    }
+    a {
+      color:@ci-grey3;
+      margin: 0 2px;
+      .transition(color 200ms ease);
+      &:hover {
+        color:@ci-grey4;
+        .transition(color 200ms ease);
+      }
+      &:first-child{
+        margin-left:10px;
+
+      }
+    }
+  }
+
+} // #Footer2

@@ -1,0 +1,182 @@
+@sansFontFamily:        'SourceSansPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Courier, monospace;
+
+@baseFontSize:          15px;
+@baseLineHeight:        24px;
+
+@headingsFontWeight:    normal;    // instead of browser default, bold
+
+
+//----------------- TABLES ----------------------------------------------------
+.table-striped tbody tr:nth-child(even) td{
+    background:@ci-grey6;
+}
+
+.table-striped tbody tr:nth-child(odd) td{
+    background:transparent;
+}
+
+.table-striped, .table-striped tbody tr td{
+    border-color:@borderColor;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background:@ci-grey6;
+}
+
+//----------------- NAV TABS --------------------------------------------------
+.nav-tabs {
+    border-color:@borderColor;
+    li {
+        a {
+            background:transparent;
+            min-width:20px;
+            padding: 10px 20px;
+            text-align:center;
+            margin-right:0px;
+            border:none;
+            border-top:2px solid transparent;
+            color:@textColor;
+            .border-radius(0px);
+            &:hover {
+                border-top: 2px solid @orange;
+                background:@ci-grey6;
+            }
+        }
+        &.active {
+            a {
+                color:@textColor;
+                background-color:@ci-grey7;
+                border-top-color: @orange;
+                border:1px solid @borderColor;
+                border-top:2px solid @orange;
+                border-bottom:1px solid @ci-grey7;
+                .border-radius(0px);
+                &:hover {
+                    background:transparent;
+                    border:1px solid @borderColor;
+                    border-top:2px solid @orange;
+                    border-bottom:1px solid @ci-grey7;
+                }
+            }
+        }
+    }
+}
+
+//----------------- BUTTONS ---------------------------------------------------
+
+.btn {
+    background-image:none;
+    box-shadow:none;
+    text-shadow:0 -1px 0 @ci-grey4;
+    font-weight:600;
+    .border-radius(@radius);
+    border-bottom:1px solid @ci-grey4;
+    .box-shadow(0px 2px 0px @ci-grey4);
+    color:@white;
+
+}
+
+.btn,
+.btn-group > .btn.dropdown-toggle {
+    .buttonBackground-patched(@ci-grey5, @ci-grey4, @white);
+    span.caret {
+        border-top-color:@white;
+    }
+}
+
+.btn-primary,
+.btn-group > .btn.dropdown-toggle.btn-primary {
+    //.buttonBackground(@startColor, @endColor, @textColor: #fff);
+    .buttonBackground-patched(@ci-orange, @ci-orange-dark, @white);
+}
+
+.btn-warning,
+.btn-group > .btn.dropdown-toggle.btn-warning {
+    .buttonBackground-patched(@ci-red, @ci-red-dark, @white);
+}
+
+.btn-danger,
+.btn-group > .btn.dropdown-toggle.btn-danger {
+    .buttonBackground-patched(@ci-red, @ci-red-dark, @white);
+}
+
+.btn-success,
+.btn-group > .btn.dropdown-toggle.btn-success {
+    .buttonBackground-patched(@ci-green, @ci-green-dark, @white);
+}
+
+.btn-info,
+.btn-link,
+.btn-group > .btn.dropdown-toggle.btn-info,
+.btn-group > .btn.dropdown-toggle.btn-link {
+    .buttonBackground-patched(@ci-grey5, @ci-grey4, @white);
+}
+
+.btn-inverse,
+.btn-group > .btn.dropdown-toggle.btn-inverse {
+    .buttonBackground-patched(@ci-grey2, @ci-grey1, @white);
+}
+
+.btn-link:hover{
+    text-decoration:none;
+}
+
+.btn-group-vertical > .btn {
+    &:not(:last-child){
+        .box-shadow(none);
+    }
+}
+
+// ---------------- ACCORDION -------------------------------------------------
+
+.accordion {
+    .accordion-group {
+        background:@ci-grey7;
+        border: none;
+        border-bottom: 1px solid @borderColor;
+        .border-radius(0px);
+        .accordion-inner {
+            border-top:none;
+        }
+        .accordion-toggle {
+            padding-left: 0px;
+            color:@textColor;
+            font-weight:700;
+            &:before {
+                display:inline-block;
+                content: " ";
+                width: 12px;
+                height: 12px;
+                margin-right:10px;
+                background: url(../img/glyphicons-halflings-orange.png) no-repeat -458px -74px;
+            }
+            &:hover {
+                color:@ci-orange;
+                &:before {
+                    background: url(../img/glyphicons-halflings-orange.png) no-repeat -313px -121px;
+                }
+            }
+        }
+        .accordion-toggle.active {
+            color:@textColor;
+            &:before {
+                display:inline-block;
+                content: " ";
+                width: 12px;
+                height: 12px;
+                margin-right:10px;
+                background: url(../img/glyphicons-halflings-orange.png) no-repeat -313px -121px;
+            }
+        }
+        .collapse {
+            transition: height .5s
+        }
+        .collapse.in {
+            height:auto!important;
+            transition: height .5s
+        }
+    }
+}
+

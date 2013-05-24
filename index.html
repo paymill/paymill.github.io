@@ -2,9 +2,171 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TEST</title>
+    <title>Plugins &amp; Extensions - PAYMILL</title>
+    <link rel="stylesheet" href="assets/css/static.css" media="screen">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-collapse.min.js" type="text/javascript"></script>
+    <script>
+    $(function(){
+        $(".PluginsContainer").hover(
+            function () {
+                $(this).stop().animate({"height":'380px'}, 500);
+            },
+            function () {
+                $(this).stop().css({"overflow":"hidden"}).animate({"height":'120px'}, 500);
+                $(".PluginsList").slideUp(200);
+            }
+        );
+        $(".more").bind("click", function(e){
+            e.preventDefault();
+            $(".PluginsList").slideDown(200);
+            $(".PluginsContainer").css({"height":"auto","overflow":"auto"});
+
+        })
+    });
+    </script>
 </head>
 <body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="span12 pagination-centered">
+                    <div id="Logo">
+                        <a href="//paymill.com">
+                            <img src="assets/img/branding-2013.png" alt="PAYMILL - The Payment Engineers">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!-- //HEADER -->
+
+    <section id="Content">
+        <div class="PluginsContainer">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="row">
+                            <div class="span4">
+                                <div class="Plugin">
+                                    <p class="image">
+                                        <img src="assets/img/logos/logo-drupal.png" alt="Drupal">
+                                    </p>
+                                    <p>
+                                        Unser Oxid Plugin kannst du mit folgender Anleitung (Version 4.7) oder Anleitung (Version 4.6) problemlos in deinem Shop integrieren.<br>
+                                        <br>
+                                        <a href="" class="btn btn-primary">Download</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <div class="Plugin">
+                                    <p class="image">
+                                        <img src="assets/img/logos/logo-magento.png" alt="Drupal">
+                                    </p>
+                                    <p>
+                                        Unsere Magento-Erweiterung kannst du bequem in deinem Shop-Backend in Magento Connect hochladen und installieren. Trage danach unter Zahlungsarten deine PAYMILL-Keys ein.
+                                        <br>
+                                        <a href="" class="btn btn-primary">Download</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <div class="Plugin">
+                                    <p class="image">
+                                        <img src="assets/img/logos/logo-oxid.png" alt="Drupal">
+                                    </p>
+                                    <p>
+                                        Unser Oxid Plugin kannst du mit folgender Anleitung (Version 4.7) oder Anleitung (Version 4.6) problemlos in deinem Shop integrieren.<br>
+                                        <br>
+                                        <a href="" class="btn btn-primary">Download</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="span12 pagination-centered">
+                                <a href="more" class="more">
+                                    <span>More Plugins</span>
+                                    <!--
+                                    <div class="arrow_scrolldown">&nbsp;</div>
+                                    -->
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="PluginsList" style="display:none">
+                            <div class="row">
+                                <div class="span8 offset2">
+                                        <h2>Magento</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptate suscipit molestiae rerum consequatur excepturi laudantium.
+                                        </p>
+                                        <p>
+                                            <a href="">Lorem ipsum</a> | <a href="">dolor sit</a>
+                                        </p>
+                                        <h2>Oxid</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        </p>
+                                        <h2>Shopware 4</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptate suscipit molestiae rerum.
+                                        </p>
+                                        <h2>Gambio</h2>
+                                        <p>
+                                            Aliquid a amet culpa quod neque earum ducimus blanditiis. Minima tenetur minus cumque quam!
+                                        </p>
+                                        <h2>xt:commerce</h2>
+                                        <p>
+                                            Impedit repudiandae quis corporis aliquam eius voluptatum laborum atque recusandae accusantium.
+                                        </p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- //.PluginsList -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="span8 offset2">
+                    <div class="headline">
+                        <h1>Reasons to hack on our products</h1>
+                    </div>
+                    <p>Why should you join us and be a part of Paymill open-source community?</p>
+                    <p>
+                        Be social and code what could other people help out. Of course we're gonna mention you on our site and make a blog post about that too. We're always looking for talented developers who want to join Paymill. Maybe you're the next one?
+                    </p>
+                    <p>
+                        Beyond those reasons we heart the dev scene out there and want to get all of you working with our code whenever it is possible and on a stable version so you can work without problems on it. And yes, we love animated GIF's as you do, come on guys. Let's talk and have a good time. We are looking forward to hear from you soon!<br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span9 offset1">
+                    <div class="notice">
+                        <p>
+                            <strong>TL;DR - Chat with us</strong><br>
+                            You can find us on Freenode on IRC in the #paymill channel. Or write us a quick message.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- //SECTION -->
+
+    <footer id="Footer">
+        <div id="FooterLogo">
+            <img src="" alt="">
+        </div>
+        <div id="Legal">
+            <a href="">Impressum</a> - <a href="">AGB</a>
+        </div>
+    </footer><!-- //FOOTER -->
 
 </body>
 </html>

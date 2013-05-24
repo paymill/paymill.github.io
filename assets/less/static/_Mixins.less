@@ -1,0 +1,91 @@
+.border-radius-complex(@rightTop, @rightBottom, @leftBottom, @leftTop) {
+    -webkit-border-top-right-radius: @rightTop;
+        -moz-border-radius-topright: @rightTop;
+            border-top-right-radius: @rightTop;
+
+    -webkit-border-bottom-right-radius: @rightBottom;
+        -moz-border-radius-bottomright: @rightBottom;
+            border-bottom-right-radius: @rightBottom;
+
+    -webkit-border-bottom-left-radius: @leftBottom;
+        -moz-border-radius-bottomleft: @leftBottom;
+            border-bottom-left-radius: @leftBottom;
+
+    -webkit-border-top-left-radius: @leftTop;
+        -moz-border-radius-topleft: @leftTop;
+            border-top-left-radius: @leftTop;
+}
+
+.headline() {
+    &:before{
+        content:' ';
+        background: transparent url(../img/headline-tags.png) no-repeat left;
+        display: inline-block;
+        height:30px;
+        width: 12px;
+        position: relative;
+        top:3px;
+        right: 10px;
+    }
+    &:after{
+        content:' ';
+        background: transparent url(../img/headline-tags.png) no-repeat right;
+        display: inline-block;
+        height:30px;
+        width: 26px;
+        position: relative;
+        top:7px;
+        left:10px;
+    }
+}
+
+.hover-transitions(@time: 200){
+    -webkit-transition: all @time ease;
+    -moz-transition: all @time ease;
+    -ms-transition: all @time ease;
+    -o-transition: all @time ease;
+    transition: all @time ease;
+}
+
+.boxsize(@width: 60px, @height: 60px){
+    width: @width;
+    height: @height;
+}
+
+.border(){
+    border:1px solid @borderColor;
+}
+
+.buttonBackground-patched(@background: @ci-grey6, @borderColor: @borderColor, @textColor: #fff) {
+
+    background-color: @background;
+    *background-color: darken(@background, 5%); /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    border-color:@borderColor;
+    text-shadow: 0 -1px @borderColor;
+
+    .box-shadow(inset 0px -2px 0px fade(@borderColor,100%));
+
+    .reset-filter();
+
+    // in these cases the gradient won't cover the background, so we override
+    &:hover, &:active, &.active, &.disabled, &[disabled] {
+        color: @textColor;
+        background-color: @background;
+        *background-color: darken(@background, 10%);
+        //margin-top:2px;
+        .box-shadow( 0px 0px 0px fade(@borderColor,100%));
+        .transition(all 200ms ease);
+    }
+
+    &:active{
+        background-color:darken(@background, 5%);
+        .box-shadow(inset 0px 0px 2px black);
+    }
+
+    // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+    &:active,
+    &.active {
+        background-color: darken(@borderColor, 10%) e("\9");
+    }
+}

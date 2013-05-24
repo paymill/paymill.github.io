@@ -1,0 +1,17 @@
+#Merchant #topTabs .questionsTab {
+  background: none!important;
+  background-image: none!important;
+  background-color: none!important;
+  filter: none;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
+}
+#Statistic .datepicker-group {
+  float: right;
+  margin: 0 0 0 20px;
+}
+#Statistic .datepicker-group input {
+  width: 58px;
+  margin: 0 0 0 5px;
+  font-size: 11px;
+  padding-left: 0;
+}

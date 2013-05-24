@@ -1,0 +1,206 @@
+// Base colors
+@black:                 #000000;
+@white:                 #ffffff;
+@grayDarker:            #292929;
+@grayDark:              #333333;
+@gray:                  #4a4a4a;
+@grayLight:             #7a7a7a;
+@grayLighter:           #999999;
+@whiteDark:             #f6f6f6;
+@whiteDarker:           #c3c3c3;
+@whiteSemiDark:         #ededed;
+@orange:                #f05000;
+@brown:                 #a54e02;
+
+// Corporate colors
+@corp:                  @orange;
+@corpDark:              darken(@corp, 5%);
+@corpDarker:            darken(@corpDark, 5%);
+@corpLight:             lighten(@corp, 12%);
+@boxShadow:             0 2px 4px rgba(0, 0, 0, 0.4);
+
+// Scaffolding
+@bodyBackground:        transparent;
+@textColor:             @grayDarker;
+
+// Links
+@linkColor:             @corp;
+@linkColorHover:        @corpDarker;
+
+// Typography
+@sansFontFamily:        'OpenSans', Helvetica, Arial, sans-serif;
+@serifFontFamily:       "Times New Roman", Times, serif;
+@baseLineHeight:        20px;
+@baseFontSize:          13px;
+
+// Widgets
+@btnPrimaryBackground:          @orange;
+@btnPrimaryBackgroundHighlight: darken(@corp, 2%);
+@inputDisabledBackground:       #F2F2F2;
+@iconOrangeSpritePath:          "../img/glyphicons-halflings-orange.png";
+
+// Navbar
+@navbarHeight:                  80px;
+@navbarBackground:              @white;
+@navbarBackgroundHighlight:     @whiteDark;
+@navbarText:                    @black;
+@navbarLinkColor:               @grayDark;
+@navbarLinkColorHover:          @black;
+@navbarLinkColorActive:         @black;
+@navbarLinkBackgroundActive:    @whiteDark;
+
+// Mixin patches
+.tab-focus() {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+// New and customized mixins
+.border-radius-complex(@rightTop, @rightBottom, @leftBottom, @leftTop) {
+    -webkit-border-top-right-radius: @rightTop;
+        -moz-border-radius-topright: @rightTop;
+            border-top-right-radius: @rightTop;
+
+    -webkit-border-bottom-right-radius: @rightBottom;
+        -moz-border-radius-bottomright: @rightBottom;
+            border-bottom-right-radius: @rightBottom;
+
+    -webkit-border-bottom-left-radius: @leftBottom;
+        -moz-border-radius-bottomleft: @leftBottom;
+            border-bottom-left-radius: @leftBottom;
+
+    -webkit-border-top-left-radius: @leftTop;
+        -moz-border-radius-topleft: @leftTop;
+            border-top-left-radius: @leftTop;
+}
+
+.transition_2 (@transition) {
+  -webkit-transition: all @transition ease-in-out;
+  -moz-transition:    all @transition ease-in-out;
+  -o-transition:      all @transition ease-in-out;
+  transition:         all @transition ease-in-out;
+}
+
+// Form patches
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  &:focus {
+    outline: none;
+    border-color: @orange;
+    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #f05000");
+  }
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: 0px;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  color: #e1e1e1!important;
+}
+
+// Modals
+.modal {
+  &.fade {
+    .transition(e('opacity .4s linear', top .1s )); //, top .5s ease-out
+  }
+}
+
+// Navs
+.nav > li > a:hover {
+  background-color: transparent;
+}
+
+.nav-tabs > li > a {
+  padding-top: 4px;
+}
+
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover {
+  color: @gray;
+  background-color: transparent;
+}
+
+// Sprites
+.icon-orange {
+  background-image: url("@{iconOrangeSpritePath}");
+}
+
+.icon-undefinend    { background-position: 0     -168px; }
+.icon-key           { background-position: -24px -168px; }
+
+// Misc patches
+#Filters div a.btn {
+  height: @baseLineHeight;
+}
+
+// Tooltips
+.tooltip-inner {
+  max-width:none;
+  width:160px;
+}
+
+.table-container {
+  height: 260px;
+  overflow: auto;
+  border: 1px solid #ccc;
+  border-top-color: #aaa;
+  &.large { 
+    height: 300px; 
+  }    
+}
+
+table {
+    &.table-noborder {
+        th, td {
+            border-top: 0;
+        }
+    }
+}
+
+.controls {
+    &.controls-noinput {
+        &.checkbox-list {
+            display: inline-block;
+            width: 210px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.btn-normal {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: normal;
+}
+
+.sheet {
+    &.modal {
+        &.fade.in {
+            top: 60%;
+        }
+    }
+}

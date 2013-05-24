@@ -1,0 +1,157 @@
+header {
+    padding: 80px 0 100px;
+    //border-bottom: 1px solid @ci-grey3;
+}
+
+.PluginsContainer {
+
+    background:@ci-grey6;
+    border: 1px solid @borderColor;
+    padding-top: 40px;
+    height:120px;
+    overflow:hidden;
+
+    .Plugin {
+        background:@white;
+        border:1px solid @borderColor;
+        .box-sizing(border-box);
+        height:300px;
+        padding: 40px 40px;
+
+        .border-radius(@radius);
+        .transition(box-shadow 500ms ease);
+
+        p {
+            color:@ci-grey4;
+            font-size: 15px;
+            line-height: 20px;
+
+            &.image {
+                text-align: center;
+            }
+        }
+
+
+        &:hover {
+            .box-shadow(0 0 10px 0px rgba(0, 0, 0, 0.2));
+            .transition(all 200ms ease);
+        }
+    }
+
+    .PluginsList {
+        //background: #0cf;
+        padding:40px 0;
+
+    }
+
+
+
+}
+
+.headline {
+    margin: 40px 0 40px 0;
+}
+
+//Scrolldown
+
+.more{
+    display:block;
+    position:relative;
+    background:#0cf;
+    background:transparent;
+    height:40px;
+    margin-top: 0px;
+    line-height: 40px;
+
+    span {
+        display:inline-block;
+        width:120px;
+        height:40px;
+        margin:20px auto;
+        border: 1px solid @borderColor;
+        color:@textColor;
+        background:@ci-grey7;
+        display:block;
+        .border-radius(@radius);
+    }
+}
+
+.arrow_scrolldown {
+  background: url(../img/arrow_scrolldown.png) no-repeat center;
+  width: 20px;
+  height: 12px;
+  position:absolute;
+  left:50%;
+  margin-left: -10px;
+  .m_animation(bottomarrow-bounce, 'ease-in-out', 2s, infinite );
+}
+
+// Transformations
+.m_animation(@name, @function, @duration, @iteration, @delay: 0 ) {
+  animation-name: @name;
+  animation-timing-function: @function;
+  animation-duration: @duration;
+  animation-iteration-count: @iteration;
+  animation-delay: @delay;
+  -moz-animation-name: @name;
+  -moz-animation-timing-function: @function;
+  -moz-animation-duration: @duration;
+  -moz-animation-iteration-count: @iteration;
+  -moz-animation-delay: @delay;
+  -webkit-animation-name: @name;
+  -webkit-animation-timing-function: @function;
+  -webkit-animation-duration: @duration;
+  -webkit-animation-iteration-count: @iteration;
+  -webkit-animation-delay: @delay;
+}
+
+//MIXINS
+
+@keyframes bottomarrow-bounce {
+    from {
+        -transition-property: opacity;
+        opacity:1;
+    }
+    50% {
+        -transition-property: opacity;
+        opacity:.1;
+        bottom:100%;
+    }
+    to {
+        -transition-property: opacity;
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes bottomarrow-bounce {
+    from {
+        -transition-property: opacity;
+        opacity:1;
+    }
+    50% {
+        -transition-property: opacity;
+        opacity:.1;
+        bottom:100%;
+    }
+    to {
+        -transition-property: opacity;
+        opacity:1;
+    }
+}
+
+@-moz-keyframes bottomarrow-bounce {
+    from {
+        -transition-property: opacity;
+        opacity:1;
+    }
+    50% {
+        -transition-property: opacity;
+        opacity:.1;
+        bottom:100%;
+    }
+    to {
+        -transition-property: opacity;
+        opacity:1;
+    }
+}
+

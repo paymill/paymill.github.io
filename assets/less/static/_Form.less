@@ -1,0 +1,78 @@
+
+.form-icons {
+    text-align:center;
+
+    input.name,
+    input.email,
+    input.platform {
+        margin-bottom: 15px;
+        background-color: #eaeff1;
+        background-image: url(../img/form-sprite.png);
+        background-repeat: no-repeat;
+        background-position: 0 -40px;
+        padding: 10px 10px 10px 50px;
+        height: 40px;
+        width: 100%;
+        color: #424a4d;
+        .box-sizing(border-box);
+        &:focus {
+            box-shadow: none;
+            border-color: #9ca5a8;
+        }
+    }
+    input.name{
+        background-position: 0 -40px*2;
+    }
+    input.platform {
+        background-position: 0 -40px*3;
+    }
+    .dropdown {
+        position: relative;
+        margin-bottom: 15px;
+        height: 40px;
+        input.platform {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        select {
+            position: absolute;
+            top: 6px;
+            left: 0;
+            opacity: 00;
+            width: 100%;
+            border: none;
+            option {
+                padding: 5px 50px;
+                background-color: #eaeff1;
+            }
+        }
+
+    }
+    textarea {
+        margin-bottom: 15px;
+        background-color: #eaeff1;
+        height: 120px;
+        width: 100%;
+        color: #424a4d;
+        .box-sizing(border-box);
+        &:focus, &:required, &:invalid, &:focus:required:invalid:focus {
+            color: #424a4d;
+            box-shadow: none;
+            border-color: #9ca5a8;
+        }
+    }
+    button {
+        width: 100%;
+    }
+    
+
+    label.checkbox {
+        text-align: left;
+        padding-left: 0px;
+        input[type="checkbox"]{
+            margin-right: 5px;
+        }
+    }
+}    

@@ -1,0 +1,264 @@
+#full-view-button {
+	font-size: 13px !important;
+} 
+#extra {
+/* */
+	margin: 3px 3px 0 3px  !important;
+	background-color: #F37700 !important;
+	border-color: #F37700 !important;
+	border-color: rgba(243, 119, 0, 1) !important;
+    border-width: 3px !important;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 5px 5px 0px 0px !important;
+    width: 244px !important;
+}
+#content-container #content {
+	border-color: #F37700 !important;
+	border-color: rgba(243, 119, 0, 1) !important;
+    border-width: 3px !important;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 5px 5px 0px 0px !important;
+    margin: 6px 6px 0px 6px!important;
+}
+#wrapper {
+	margin: 3px 3px 0 3px;
+}
+#notification.error {
+	background-color: #F37700;
+}
+#body .form div.invalid label {
+	color: #F37700;
+}
+.outline {
+	border-color: #F37700;
+	border-color: rgba(243, 119, 0, 1);
+    border-width: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px 5px 0px 0px !important;
+
+}
+#content .form {
+	padding: 20px 20px 20px 10px;
+}
+#content .form .input {
+	width: 100%;
+}
+.title {
+    color: #292929;
+    font-size: 12px;
+    background-color: #e5e5e5;
+}
+#title {
+    border-radius: 4px 4px 0 0; 
+}
+#title #title-text {
+	margin-left: 12px;
+}
+#body .top-shadow {
+    box-shadow: none;
+    border-top: 1px dotted #999999;
+    height: 1px;
+    display: block;
+    margin-top: 0;
+}
+#body .time {
+	padding: 0 12px 0 0;
+}
+#body-inner {
+    background-color: #ffffff;
+}
+#operators td {
+	padding: 16px 10px 20px 20px;
+}
+.client, .operator {
+    background-color: #FFFFFF;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    border-radius: 0px;
+    color: #333333;
+    margin: 0px 0 1px 0;
+    padding-left: 20px !important;
+}
+#livechat-badge {
+	background-color: #F37700 !important;
+	box-shadow: 0 -1px 0 #F37700, -1px 0 0 #F37700, 1px 0 0 #F37700, 0 1px 0 #F37700, 0 0 2px #000000 !important;
+}
+.operator-border {
+    border-color: #F37700;
+}
+.operator .author {
+    color: #F37700;
+}
+.client-border {
+    border-color: #292929;
+}
+.client .author {
+    color: #292929;
+}
+#content p.client.same-author, #content p.operator.same-author {
+    margin-top: -2px; 
+}
+.text, .operator-name, .textarea-font {
+    color: #292929;
+}
+.operator-role {
+    color: #7A7A7A;
+}
+.footer {
+	background-color: #F37700;
+	color: #fff;
+}
+.message-wrapper {
+    box-shadow: none;
+}
+#view-invitation {
+    background-color:#ffffff;
+    color: #292929;
+}
+
+.submit input, 
+#invitation #invitation-buttons .btn a,
+#confirm-closing p.actions input,
+a#dont-leave-chat,
+.btn a {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #E97200;
+    background-image: -moz-linear-gradient(center top , #F37700, #DA6B00);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding: 4px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.submit input:hover, 
+#invitation #invitation-buttons .btn a:hover,
+#confirm-closing p.actions input:hover,
+a#dont-leave-chat:hover,
+.btn a:hover {
+    -moz-transition: background-position 0.1s linear 0s;
+    background-color: #DA6B00;
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+
+input.text, #body textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+
+    color: #4A4A4A;
+    display: inline-block;
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    margin: 9px 0;
+    padding: 4px;
+    width: 338px;
+}
+#body textarea {
+	height: 60px;
+}
+input.text:focus, #body textarea:focus {
+    border-color: rgba(243, 114, 0, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(243, 114, 0, 0.6);
+    outline: 0 none;
+}
+
+#start-again {
+	color: #F37700;	
+}
+#textarea-wrapper {
+    border-radius: 3px 3px 3px 3px;
+}
+#operators #email_transcript_form {
+	left: -20px;
+	background-color: #EDEDED;
+}
+
+
+#operators #email_transcript_form input[type="submit"] {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: #CCCCCC #CCCCCC #B3B3B3;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 4px 10px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+#operators #email_transcript_form input[type="submit"]:hover, #operators #email_transcript_form input[type="submit"]:active {
+    -moz-transition: background-position 0.1s linear 0s;
+    background-color: #E6E6E6;
+    background-position: 0 -15px;
+    color: #333333;
+    text-decoration: none;
+}
+#view-prechat-survey  input[type="submit"], #view-offline-form  input[type="submit"]{
+	float: right;
+	margin-right: -10px;
+}
+#operators .logo {
+	background-position: 168px 0;
+}
+body.avatar-enabled #content img.avatar {
+	display: none;
+}
+#footer, #footer td {
+	height: 13px;
+	text-indent: -9000px;
+	overflow: hidden;
+}
+#footer p {
+	line-height: 1px;
+}
+#message-wrapper {
+	padding: 10px 7px 0;
+}
+#message {
+	height: 50px;
+	padding: 0 7px 5px;
+	width: 338px;
+}
+#message-placeholder {
+	left: 13px;
+	top: 6px;
+}
+#view-offline-message-sent p {
+	padding: 20px
+}
