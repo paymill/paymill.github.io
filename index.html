@@ -11,10 +11,10 @@
 
         $(".more").bind("click", function(e){
             e.preventDefault();
-            $(this).hide();
-            $(".PluginsList").slideDown(200);
-            $(".PluginsContainer").css({"height":"auto","overflow":"auto"});
+            $(this).hide(0);
 
+            $(".PluginsList").fadeIn(200);
+            $(".PluginsContainer").css({"height":"auto","overflow":"auto"});
         });
 
         var timeoutId2;
@@ -47,7 +47,7 @@
                     timeoutId = null;
                 }
                 else {
-                    $(".PluginsContainer").stop().delay(100).animate({"height":'480px'}, 500);
+                    $(".PluginsContainer").stop().delay(500).animate({"height":'480px'}, 500);
                 }
             },
             function () {
@@ -56,7 +56,7 @@
                     timeoutId = window.setTimeout(function() {
                         timeoutId = null;
                         $(".PluginsContainer").stop().css({"overflow":"hidden"}).animate({"height":'120px'}, 500);
-                        $(".PluginsList").slideUp(200);
+                        $(".PluginsList").fadeOut(200);
                         $(".more").show();
                    }, 1000);
                 }
