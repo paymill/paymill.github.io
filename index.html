@@ -6,23 +6,77 @@
     <link rel="stylesheet" href="assets/css/static.css" media="screen">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap-collapse.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap/bootstrap-tooltip.min.js" type="text/javascript"></script>
     <script>
     $(function(){
+/*
         $(".PluginsContainer").hover(
             function () {
-                $(this).stop().animate({"height":'380px'}, 500);
+                $(this).stop().animate({"height":'430px'}, 500);
             },
             function () {
                 $(this).stop().css({"overflow":"hidden"}).animate({"height":'120px'}, 500);
                 $(".PluginsList").slideUp(200);
+                $(".more").show();
             }
         );
+*/
         $(".more").bind("click", function(e){
             e.preventDefault();
+            $(this).hide();
             $(".PluginsList").slideDown(200);
             $(".PluginsContainer").css({"height":"auto","overflow":"auto"});
 
-        })
+        });
+
+        var timeoutId2;
+        $(".giflove").hover(
+            function () {
+                if (!timeoutId2) {
+                    timeoutId2 = window.setTimeout(function() {
+                        timeoutId2 = null;
+                        $("html, body").delay(1200).css({"background-image":'url(assets/img/gif-background.gif)'});
+                   }, 1000);
+                }
+            },
+            function () {
+
+                if (timeoutId2) {
+                    window.clearTimeout(timeoutId2);
+                    timeoutId2 = null;
+                }
+                else {
+                   $("html, body").css({"background-image":'none'});
+                }
+            }
+        );
+
+        var timeoutId;
+        $(".PluginsContainer").hover(
+            function () {
+                if (timeoutId) {
+                    window.clearTimeout(timeoutId);
+                    timeoutId = null;
+                }
+                else {
+                    $(".PluginsContainer").stop().delay(100).animate({"height":'480px'}, 500);
+                }
+            },
+            function () {
+
+                if (!timeoutId) {
+                    timeoutId = window.setTimeout(function() {
+                        timeoutId = null;
+                        $(".PluginsContainer").stop().css({"overflow":"hidden"}).animate({"height":'120px'}, 500);
+                        $(".PluginsList").slideUp(200);
+                        $(".more").show();
+                   }, 1000);
+                }
+            }
+        );
+
+        $(".tip").tooltip({"placement":"bottom"});
+
     });
     </script>
 </head>
@@ -51,42 +105,48 @@
                             <div class="span4">
                                 <div class="Plugin">
                                     <p class="image">
-                                        <img src="assets/img/logos/logo-drupal.png" alt="Drupal">
+                                        <img src="assets/img/logos/logo-magento.png" alt="Magento">
                                     </p>
+                                    <h1>Magento</h1>
                                     <p>
-                                        Unser Oxid Plugin kannst du mit folgender Anleitung (Version 4.7) oder Anleitung (Version 4.6) problemlos in deinem Shop integrieren.<br>
-                                        <br>
-                                        <a href="" class="btn btn-primary">Download</a>
+                                        You can conveniently upload and install our Magento extension in your shop-backend function in Magento Connect.
+                                    </p>
+                                    <p class="download">
+                                        <a href="https://github.com/Paymill/Paymill-Magento/" class="btn btn-block">Download</a>
                                     </p>
                                 </div>
                             </div>
                             <div class="span4">
                                 <div class="Plugin">
                                     <p class="image">
-                                        <img src="assets/img/logos/logo-magento.png" alt="Drupal">
+                                        <img src="assets/img/logos/logo-oxid.png" alt="OXID">
                                     </p>
+                                    <h1>OXID</h1>
                                     <p>
-                                        Unsere Magento-Erweiterung kannst du bequem in deinem Shop-Backend in Magento Connect hochladen und installieren. Trage danach unter Zahlungsarten deine PAYMILL-Keys ein.
-                                        <br>
-                                        <a href="" class="btn btn-primary">Download</a>
+                                        You can simple integrate one of our Oxid Plugins with the following instructions for <a href="https://github.com/Paymill/Paymill-Oxid-4.7" target="_blank">Oxid (version 4.7)</a> and <a href="https://github.com/Paymill/Paymill-Oxid#readme" title="Oxid readme" target="_blank">Oxid (version 4.6)</a>.
+                                    </p>
+                                    <p class="download">
+                                        <a href="https://github.com/Paymill/Paymill-Oxid-4.7/" class="btn btn-block">Download</a>
                                     </p>
                                 </div>
                             </div>
                             <div class="span4">
                                 <div class="Plugin">
                                     <p class="image">
-                                        <img src="assets/img/logos/logo-oxid.png" alt="Drupal">
+                                        <img src="assets/img/logos/logo-shopware.png" alt="Shopware 4">
                                     </p>
+                                    <h1>Shopware 4</h1>
                                     <p>
-                                        Unser Oxid Plugin kannst du mit folgender Anleitung (Version 4.7) oder Anleitung (Version 4.6) problemlos in deinem Shop integrieren.<br>
-                                        <br>
-                                        <a href="" class="btn btn-primary">Download</a>
+                                        The following <a href="https://github.com/Paymill/Paymill-Shopware4#readme" title="Shopware4 readme" target="_blank">instructions</a> will enable you to integrate our Shopware 4 plugin free of hassle.
+                                    </p>
+                                    <p class="download">
+                                        <a href="https://github.com/Paymill/Paymill-Shopware4/" class="btn btn-block">Download</a>
                                     </p>
                                 </div>
                             </div>
-                            <div class="span12 pagination-centered">
+                            <div class="span10 offset1 pagination-centered">
                                 <a href="more" class="more">
-                                    <span>More Plugins</span>
+                                    <span class="weloveourdevelopers">Extensions coded by our awesome &hearts; developer community</span><span class="developerswork">View all Extension</span>
                                     <!--
                                     <div class="arrow_scrolldown">&nbsp;</div>
                                     -->
@@ -97,30 +157,41 @@
                         <div class="PluginsList" style="display:none">
                             <div class="row">
                                 <div class="span8 offset2">
-                                        <h2>Magento</h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptate suscipit molestiae rerum consequatur excepturi laudantium.
-                                        </p>
-                                        <p>
-                                            <a href="">Lorem ipsum</a> | <a href="">dolor sit</a>
-                                        </p>
-                                        <h2>Oxid</h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        </p>
-                                        <h2>Shopware 4</h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptate suscipit molestiae rerum.
-                                        </p>
-                                        <h2>Gambio</h2>
-                                        <p>
-                                            Aliquid a amet culpa quod neque earum ducimus blanditiis. Minima tenetur minus cumque quam!
-                                        </p>
-                                        <h2>xt:commerce</h2>
-                                        <p>
-                                            Impedit repudiandae quis corporis aliquam eius voluptatum laborum atque recusandae accusantium.
-                                        </p>
-                                    </ul>
+                                    <h2>Joomla<sup>BETA</sup></h2>
+                                    <p>
+                                        Paymill Joomla extension for public use.
+                                    </p>
+
+                                    <h2>PrestaShop</h2>
+                                    <p>
+                                        Payment plugin for PrestaShop Version 1.5.3.1.<br>
+                                        also avail. for PrestaShop Version 1.4.8.2.
+                                    </p>
+                                    <h2>OpenCart</h2>
+                                    <p>
+                                       Payment plugin for OpenCart Version 1.5.5.1.
+                                    </p>
+                                    <h2>JTL</h2>
+                                    <p>
+                                        Paymill extension (credit card and direct debit) for JTL (Version 3.1.5).
+                                    </p>
+                                    <h2>xtCommerce</h2>
+                                    <p>
+                                        xtCommerce (Version 4.x) Plugin for Paymill credit card and elv payments<br>
+                                        also avail. for ctCommerce Version (3.x)
+                                    </p>
+                                    <h2>Gambio</h2>
+                                    <p>
+                                        Gambio (Version gx2) Plugin for Paymill credit card and elv payments
+                                    </p>
+                                    <h2>VirtueMart</h2>
+                                    <p>
+                                        Paymill-Payment-Plugin for Virtuemart 2.x, tested with Joomla 2.5x and Virtuemart 2.14.
+                                    </p>
+                                    <h2>Commerce_Paymill</h2>
+                                    <p>
+                                        This repository contains a basic Drupal Commerce payment module for the Paymill payment service.
+                                    </p>
                                 </div>
                             </div>
                         </div> <!-- //.PluginsList -->
@@ -135,12 +206,12 @@
                     <div class="headline">
                         <h1>Reasons to hack on our products</h1>
                     </div>
-                    <p>Why should you join us and be a part of Paymill open-source community?</p>
+                    <p>Why should you join us and be a part of <a href="">PAYMILL open-source community</a>?</p>
                     <p>
-                        Be social and code what could other people help out. Of course we're gonna mention you on our site and make a blog post about that too. We're always looking for talented developers who want to join Paymill. Maybe you're the next one?
+                        Be social and code what could other people help out. Of course we're gonna mention you on our site and make a <a href="//blog.paymill.com">blog post</a> about that too. We're always looking for <a href="//paymill.com/en-gb/info-2/useful/jobs/" class="tip" data-toggle="tooltip" title="Don't forget to bring your Nerf guns">talented developers</a> who want to join PAYMILL. Maybe you're the next one?
                     </p>
                     <p>
-                        Beyond those reasons we heart the dev scene out there and want to get all of you working with our code whenever it is possible and on a stable version so you can work without problems on it. And yes, we love animated GIF's as you do, come on guys. Let's talk and have a good time. We are looking forward to hear from you soon!<br>
+                        Beyond those reasons we heart the dev scene out there and want to get all of you <a href="//paymill.com/en-gb/documentation-3/reference/api-reference/" class="tip" data-toggle="tooltip" title="take a look at the our API">working with our code</a> whenever it is possible and on a stable version so you can work without problems on it. And yes, <span class="giflove">we <span class="herzchen">&hearts;</span> animated GIF's</span> as you do, come on guys. Let's talk and have a good time. We are looking forward to hear from you soon!<br>
                         <br>
                     </p>
                 </div>
@@ -150,7 +221,7 @@
                     <div class="notice">
                         <p>
                             <strong>TL;DR - Chat with us</strong><br>
-                            You can find us on Freenode on IRC in the #paymill channel. Or write us a quick message.
+                            You can find us on Freenode on IRC in the #paymill channel. Or <a href="mailto:it@paymill.com?subject=github.io:%20Message">write us a quick message</a>.
                         </p>
                     </div>
                 </div>
@@ -160,11 +231,18 @@
     </section><!-- //SECTION -->
 
     <footer id="Footer">
-        <div id="FooterLogo">
-            <img src="" alt="">
-        </div>
-        <div id="Legal">
-            <a href="">Impressum</a> - <a href="">AGB</a>
+        <div class="container">
+            <div class="row">
+                <div class="span12 pagination-centered">
+                    <div id="FooterLogo">
+                        <a href="//github.com/Paymill"><img src="assets/img/paymill-logo-footer.png" alt="PAYMILL - The Payment Engineers"></a>
+                        <a href="//github.com/"><img src="assets/img/github-logo.png" alt="PAYMILL on GitHub"></a>
+                    </div>
+                    <div id="Legal">
+                        <a href="//paymill.com/en-gb/imprint/">Imprint</a> &bullet; <a href="//paymill.com/en-gb/support-3/worth-knowing/terms-conditions/">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer><!-- //FOOTER -->
 

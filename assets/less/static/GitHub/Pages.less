@@ -8,33 +8,51 @@ header {
     background:@ci-grey6;
     border: 1px solid @borderColor;
     padding-top: 40px;
-    height:120px;
+    height:480px;
     overflow:hidden;
 
     .Plugin {
         background:@white;
         border:1px solid @borderColor;
         .box-sizing(border-box);
-        height:300px;
+        height:350px;
         padding: 40px 40px;
+        position:relative;
+        z-index: 8999; //almost 9000
 
         .border-radius(@radius);
         .transition(box-shadow 500ms ease);
 
+        h1 {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            margin:0 0 6px 0;
+        }
+
         p {
             color:@ci-grey4;
+            display:block;
             font-size: 15px;
             line-height: 20px;
+            min-height: 100px;
 
             &.image {
+                min-height: auto;
                 text-align: center;
             }
+
+            &.download {
+                text-align: center;
+            }
+
         }
 
 
         &:hover {
             .box-shadow(0 0 10px 0px rgba(0, 0, 0, 0.2));
             .transition(all 200ms ease);
+            margin-top: -20px;
         }
     }
 
@@ -56,102 +74,69 @@ header {
 
 .more{
     display:block;
-    position:relative;
-    background:#0cf;
     background:transparent;
     height:40px;
     margin-top: 0px;
     line-height: 40px;
 
-    span {
+
+    .weloveourdevelopers {
+        color:@ci-grey5;
+        font-size: 20px;
+        font-weight: 500;
+        text-shadow: 0 1px 1px #FFF;
+        margin: 20px 0 10px;
+        display:block;
+    }
+
+    .developerswork {
         display:inline-block;
         width:120px;
+        padding: 0 40px;
         height:40px;
-        margin:20px auto;
         border: 1px solid @borderColor;
         color:@textColor;
         background:@ci-grey7;
-        display:block;
+        text-align: center;
+        margin-left: 40px;
         .border-radius(@radius);
+        &:hover {
+            color:@textColor;
+            //font-weight: 600;
+            .box-shadow( inset 0 0 5px 0 rgba(0,0,0,.1));
+        }
     }
 }
 
-.arrow_scrolldown {
-  background: url(../img/arrow_scrolldown.png) no-repeat center;
-  width: 20px;
-  height: 12px;
-  position:absolute;
-  left:50%;
-  margin-left: -10px;
-  .m_animation(bottomarrow-bounce, 'ease-in-out', 2s, infinite );
+.giflove:hover {
+    cursor: pointer;
+    .herzchen {
+        color:red;
+    }
 }
 
-// Transformations
-.m_animation(@name, @function, @duration, @iteration, @delay: 0 ) {
-  animation-name: @name;
-  animation-timing-function: @function;
-  animation-duration: @duration;
-  animation-iteration-count: @iteration;
-  animation-delay: @delay;
-  -moz-animation-name: @name;
-  -moz-animation-timing-function: @function;
-  -moz-animation-duration: @duration;
-  -moz-animation-iteration-count: @iteration;
-  -moz-animation-delay: @delay;
-  -webkit-animation-name: @name;
-  -webkit-animation-timing-function: @function;
-  -webkit-animation-duration: @duration;
-  -webkit-animation-iteration-count: @iteration;
-  -webkit-animation-delay: @delay;
+footer#Footer {
+    margin-top: 100px;
+    min-height: 300px;
+    border-top:1px solid @ci-grey1;
+    background:@ci-grey2;
+    #FooterLogo {
+        padding:90px 0 30px;
+        img {
+            margin:0 20px;
+        }
+    }
+    #Legal {
+        color:@ci-grey3;
+        a {
+            color:@ci-grey3;
+            font-size: 12px;
+            margin:12px;
+            .transition(all 2000ms ease);
+            &:hover{
+                color:@ci-grey4;
+                .transition(all 200ms ease);
+            }
+        }
+    }
 }
-
-//MIXINS
-
-@keyframes bottomarrow-bounce {
-    from {
-        -transition-property: opacity;
-        opacity:1;
-    }
-    50% {
-        -transition-property: opacity;
-        opacity:.1;
-        bottom:100%;
-    }
-    to {
-        -transition-property: opacity;
-        opacity:1;
-    }
-}
-
-@-webkit-keyframes bottomarrow-bounce {
-    from {
-        -transition-property: opacity;
-        opacity:1;
-    }
-    50% {
-        -transition-property: opacity;
-        opacity:.1;
-        bottom:100%;
-    }
-    to {
-        -transition-property: opacity;
-        opacity:1;
-    }
-}
-
-@-moz-keyframes bottomarrow-bounce {
-    from {
-        -transition-property: opacity;
-        opacity:1;
-    }
-    50% {
-        -transition-property: opacity;
-        opacity:.1;
-        bottom:100%;
-    }
-    to {
-        -transition-property: opacity;
-        opacity:1;
-    }
-}
-

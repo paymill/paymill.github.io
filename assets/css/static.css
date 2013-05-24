@@ -5488,6 +5488,9 @@ body {
   background-image: none;
   min-height: 100%;
 }
+html {
+  background: #424a4d;
+}
 h1 {
   font-size: 32px;
   line-height: 40px;
@@ -7735,7 +7738,7 @@ header {
   background: #dde2e4;
   border: 1px solid #bdc5c8;
   padding-top: 40px;
-  height: 120px;
+  height: 480px;
   overflow: hidden;
 }
 .PluginsContainer .Plugin {
@@ -7744,8 +7747,10 @@ header {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 300px;
+  height: 350px;
   padding: 40px 40px;
+  position: relative;
+  z-index: 8999;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -7754,12 +7759,24 @@ header {
   -o-transition: box-shadow 500ms ease;
   transition: box-shadow 500ms ease;
 }
+.PluginsContainer .Plugin h1 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0 0 6px 0;
+}
 .PluginsContainer .Plugin p {
   color: #9ca5a8;
+  display: block;
   font-size: 15px;
   line-height: 20px;
+  min-height: 100px;
 }
 .PluginsContainer .Plugin p.image {
+  min-height: auto;
+  text-align: center;
+}
+.PluginsContainer .Plugin p.download {
   text-align: center;
 }
 .PluginsContainer .Plugin:hover {
@@ -7770,6 +7787,7 @@ header {
   -moz-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
+  margin-top: -20px;
 }
 .PluginsContainer .PluginsList {
   padding: 40px 0;
@@ -7779,93 +7797,75 @@ header {
 }
 .more {
   display: block;
-  position: relative;
-  background: #0cf;
   background: transparent;
   height: 40px;
   margin-top: 0px;
   line-height: 40px;
 }
-.more span {
+.more .weloveourdevelopers {
+  color: #bdc5c8;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 0 1px 1px #FFF;
+  margin: 20px 0 10px;
+  display: block;
+}
+.more .developerswork {
   display: inline-block;
   width: 120px;
+  padding: 0 40px;
   height: 40px;
-  margin: 20px auto;
   border: 1px solid #bdc5c8;
   color: #424a4d;
   background: #eaeff1;
-  display: block;
+  text-align: center;
+  margin-left: 40px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.arrow_scrolldown {
-  background: url(../img/arrow_scrolldown.png) no-repeat center;
-  width: 20px;
-  height: 12px;
-  position: absolute;
-  left: 50%;
-  margin-left: -10px;
-  animation-name: bottomarrow-bounce;
-  animation-timing-function: 'ease-in-out';
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-delay: 0;
-  -moz-animation-name: bottomarrow-bounce;
-  -moz-animation-timing-function: 'ease-in-out';
-  -moz-animation-duration: 2s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-delay: 0;
-  -webkit-animation-name: bottomarrow-bounce;
-  -webkit-animation-timing-function: 'ease-in-out';
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-delay: 0;
+.more .developerswork:hover {
+  color: #424a4d;
+  -webkit-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
-@keyframes bottomarrow-bounce {
-  from {
-    -transition-property: opacity;
-    opacity: 1;
-  }
-  50% {
-    -transition-property: opacity;
-    opacity: .1;
-    bottom: 100%;
-  }
-  to {
-    -transition-property: opacity;
-    opacity: 1;
-  }
+.giflove:hover {
+  cursor: pointer;
 }
-@-webkit-keyframes bottomarrow-bounce {
-  from {
-    -transition-property: opacity;
-    opacity: 1;
-  }
-  50% {
-    -transition-property: opacity;
-    opacity: .1;
-    bottom: 100%;
-  }
-  to {
-    -transition-property: opacity;
-    opacity: 1;
-  }
+.giflove:hover .herzchen {
+  color: red;
 }
-@-moz-keyframes bottomarrow-bounce {
-  from {
-    -transition-property: opacity;
-    opacity: 1;
-  }
-  50% {
-    -transition-property: opacity;
-    opacity: .1;
-    bottom: 100%;
-  }
-  to {
-    -transition-property: opacity;
-    opacity: 1;
-  }
+footer#Footer {
+  margin-top: 100px;
+  min-height: 300px;
+  border-top: 1px solid #2c3133;
+  background: #424a4d;
+}
+footer#Footer #FooterLogo {
+  padding: 90px 0 30px;
+}
+footer#Footer #FooterLogo img {
+  margin: 0 20px;
+}
+footer#Footer #Legal {
+  color: #6d7578;
+}
+footer#Footer #Legal a {
+  color: #6d7578;
+  font-size: 12px;
+  margin: 12px;
+  -webkit-transition: all 2000ms ease;
+  -moz-transition: all 2000ms ease;
+  -o-transition: all 2000ms ease;
+  transition: all 2000ms ease;
+}
+footer#Footer #Legal a:hover {
+  color: #9ca5a8;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 /** {
     font-family: 'SourceSansPro', 'Helvetica', sans-serif;
