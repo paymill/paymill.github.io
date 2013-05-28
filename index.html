@@ -27,6 +27,7 @@
                 <div class="row">
                     <div class="span12">
                         <div class="row">
+                            <span class="weloveourdevelopers">Extensions coded by our awesome &hearts; developer community</span>
                             <div class="span4">
                                 <div class="Plugin">
                                     <p class="image">
@@ -71,10 +72,7 @@
                             </div>
                             <div class="span10 offset1 pagination-centered">
                                 <a href="more" class="more">
-                                    <span class="weloveourdevelopers">Extensions coded by our awesome &hearts; developer community</span><span class="developerswork">View all Extension</span>
-                                    <!--
-                                    <div class="arrow_scrolldown">&nbsp;</div>
-                                    -->
+                                    <span class="developerswork">View more Extensions</span>
                                 </a>
                             </div>
                         </div>
@@ -253,7 +251,7 @@
                     timeoutId = null;
                 }
                 else {
-                    $(".PluginsContainer").stop().delay(500).animate({"height":'480px'}, 500);
+                    $(".PluginsContainer").stop().delay(500).animate({"height":'510px'}, 500);
                 }
             },
             function () {
@@ -261,7 +259,7 @@
                 if (!timeoutId) {
                     timeoutId = window.setTimeout(function() {
                         timeoutId = null;
-                        $(".PluginsContainer").stop().css({"overflow":"hidden"}).animate({"height":'120px'}, 500);
+                        $(".PluginsContainer").stop().css({"overflow":"hidden"}).animate({"height":'200px'}, 500);
                         $(".PluginsList").fadeOut(200);
                         $(".more").show();
                    }, 1000);
