@@ -4,69 +4,6 @@
     <meta charset="UTF-8">
     <title>Plugins &amp; Extensions - PAYMILL</title>
     <link rel="stylesheet" href="assets/css/static.css" media="screen">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap/bootstrap-tooltip.min.js" type="text/javascript"></script>
-    <script>
-    $(function(){
-
-        $(".more").bind("click", function(e){
-            e.preventDefault();
-            $(this).hide(0);
-
-            $(".PluginsList").fadeIn(200);
-            $(".PluginsContainer").css({"height":"auto","overflow":"auto"});
-        });
-
-        var timeoutId2;
-        $(".giflove").hover(
-            function () {
-                if (!timeoutId2) {
-                    timeoutId2 = window.setTimeout(function() {
-                        timeoutId2 = null;
-                        $("html, body").css({"background-image":'url(assets/img/gif-background.gif)'});
-                   }, 500);
-                }
-            },
-            function () {
-
-                if (timeoutId2) {
-                    window.clearTimeout(timeoutId2);
-                    timeoutId2 = null;
-                }
-                else {
-                   $("html, body").css({"background-image":'none'});
-                }
-            }
-        );
-
-        var timeoutId;
-        $(".PluginsContainer").hover(
-            function () {
-                if (timeoutId) {
-                    window.clearTimeout(timeoutId);
-                    timeoutId = null;
-                }
-                else {
-                    $(".PluginsContainer").stop().delay(500).animate({"height":'480px'}, 500);
-                }
-            },
-            function () {
-
-                if (!timeoutId) {
-                    timeoutId = window.setTimeout(function() {
-                        timeoutId = null;
-                        $(".PluginsContainer").stop().css({"overflow":"hidden"}).animate({"height":'120px'}, 500);
-                        $(".PluginsList").fadeOut(200);
-                        $(".more").show();
-                   }, 1000);
-                }
-            }
-        );
-
-        $(".tip").tooltip({"placement":"bottom"});
-
-    });
-    </script>
 </head>
 <body>
 
@@ -149,37 +86,77 @@
                                     <p>
                                         Paymill Joomla extension for public use.
                                     </p>
+                                    <ul class="checkmarks checkmarks-orange">
+                                        <li>
+                                            <a href="https://github.com/paymill/Paymill-Joomla" title="Joomla">Repository on github</a>
+                                        </li>
+                                    </ul>
 
                                     <h2>PrestaShop</h2>
                                     <p>
                                         Payment plugin for PrestaShop Version 1.5.3.1.<br>
                                         also avail. for PrestaShop Version 1.4.8.2.
                                     </p>
+                                    <p>
+                                        Repository for <a href="https://github.com/paymill/Paymill-PrestaShop">PrestaShop v. 1.5.3.1</a> &amp; <a href="https://github.com/paymill/Paymill-Prestashop-1.4.8.2.">PrestaShop v. 1.4.8.2</a> on github
+                                    </p>
+
                                     <h2>OpenCart</h2>
                                     <p>
                                        Payment plugin for OpenCart Version 1.5.5.1.
                                     </p>
+                                    <ul class="checkmarks checkmarks-orange">
+                                        <li>
+                                            <a href="https://github.com/paymill/Paymill-OpenCart">Repository on github</a>
+                                        </li>
+                                    </ul>
+
                                     <h2>JTL</h2>
                                     <p>
                                         Paymill extension (credit card and direct debit) for JTL (Version 3.1.5).
                                     </p>
+                                    <ul class="checkmarks checkmarks-orange">
+                                        <li><a href="https://github.com/paymill/Paymill-JTL">Repository on github</a></li>
+                                    </ul>
+
                                     <h2>xtCommerce</h2>
                                     <p>
                                         xtCommerce (Version 4.x) Plugin for Paymill credit card and elv payments<br>
                                         also avail. for ctCommerce Version (3.x)
                                     </p>
+                                    <ul class="checkmarks checkmarks-orange">
+                                        <li><a href="https://github.com/paymill/Paymill-xtCommerce-4">Repository for Version 4.x on github</a></li>
+                                        <li><a href="https://github.com/paymill/Paymill-xtCommerce-3">Repository for Version 3.x on github</a></li>
+                                    </ul>
+
                                     <h2>Gambio</h2>
                                     <p>
                                         Gambio (Version gx2) Plugin for Paymill credit card and elv payments
                                     </p>
+                                    <ul class="checkmarks checkmarks-orange">
+                                        <li>
+                                            <a href="https://github.com/paymill/Paymill-Gambio">Repository on github</a>
+                                        </li>
+                                    </ul>
+
                                     <h2>VirtueMart</h2>
                                     <p>
                                         Paymill-Payment-Plugin for Virtuemart 2.x, tested with Joomla 2.5x and Virtuemart 2.14.
                                     </p>
+                                    <ul class="checkmarks checkmarks-orange">
+                                        <li>
+                                            <a href="https://github.com/paymill/Paymill-VirtueMart-Tutorial">Repository on github</a>
+                                        </li>
+                                    </ul>
+
                                     <h2>Commerce_Paymill</h2>
                                     <p>
                                         This repository contains a basic Drupal Commerce payment module for the Paymill payment service.
                                     </p>
+                                    <ul class="checkmarks checkmarks-orange">
+                                        <li><a href="https://github.com/paymill/Commerce_Paymill">Repository on</a></li>
+                                    </ul>
+
                                 </div>
                             </div>
                         </div> <!-- //.PluginsList -->
@@ -194,7 +171,7 @@
                     <div class="headline">
                         <h1>Reasons to hack on our products</h1>
                     </div>
-                    <p>Why should you join us and be a part of <a href="">PAYMILL open-source community</a>?</p>
+                    <p><strong>Why should you join us and be a part of PAYMILL open-source community?</strong></p>
                     <p>
                         Be social and code what could other people help out. Of course we're gonna mention you on our site and make a <a href="//blog.paymill.com">blog post</a> about that too. We're always looking for <a href="//paymill.com/en-gb/info-2/useful/jobs/" class="tip" data-toggle="tooltip" title="Don't forget to bring your Nerf guns">talented developers</a> who want to join PAYMILL. Maybe you're the next one?
                     </p>
@@ -233,6 +210,68 @@
             </div>
         </div>
     </footer><!-- //FOOTER -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-tooltip.min.js" type="text/javascript"></script>
+    <script>
+    $(function(){
 
+        $(".more").bind("click", function(e){
+            e.preventDefault();
+            $(this).hide(0);
+
+            $(".PluginsList").fadeIn(200);
+            $(".PluginsContainer").css({"height":"auto","overflow":"auto"});
+        });
+
+        var timeoutId2;
+        $(".giflove").hover(
+            function () {
+                if (!timeoutId2) {
+                    timeoutId2 = window.setTimeout(function() {
+                        timeoutId2 = null;
+                        $("html, body").css({"background-image":'url(assets/img/gif-background.gif)'});
+                   }, 500);
+                }
+            },
+            function () {
+
+                if (timeoutId2) {
+                    window.clearTimeout(timeoutId2);
+                    timeoutId2 = null;
+                }
+                else {
+                   $("html, body").css({"background-image":'none'});
+                }
+            }
+        );
+
+        var timeoutId;
+        $(".PluginsContainer").hover(
+            function () {
+                if (timeoutId) {
+                    window.clearTimeout(timeoutId);
+                    timeoutId = null;
+                }
+                else {
+                    $(".PluginsContainer").stop().delay(500).animate({"height":'480px'}, 500);
+                }
+            },
+            function () {
+
+                if (!timeoutId) {
+                    timeoutId = window.setTimeout(function() {
+                        timeoutId = null;
+                        $(".PluginsContainer").stop().css({"overflow":"hidden"}).animate({"height":'120px'}, 500);
+                        $(".PluginsList").fadeOut(200);
+                        $(".more").show();
+                   }, 1000);
+                }
+            }
+        );
+
+        $(".tip").tooltip({"placement":"bottom"});
+
+    });
+    </script>
 </body>
 </html>

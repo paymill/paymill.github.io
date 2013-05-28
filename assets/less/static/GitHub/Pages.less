@@ -58,7 +58,16 @@ header {
 
     .PluginsList {
         //background: #0cf;
-        padding:40px 0;
+        padding:40px 0 50px;
+
+        h2 {
+            border-top:1px solid @borderColor;
+            padding-top: 50px;
+            &:first-child{
+                padding-top: none;
+                border-top: none;
+            }
+        }
 
     }
 
@@ -87,6 +96,17 @@ header {
         text-shadow: 0 1px 1px #FFF;
         margin: 20px 0 10px;
         display:block;
+        position:relative;
+        .heart:before{
+            content: "♥";
+            display:inline-block;
+            top:-40px;
+            line-height: 20px;
+            height:50px;
+            z-index: 9000;
+            background:#0cf;
+            position:absolute;
+        }
     }
 
     .developerswork {

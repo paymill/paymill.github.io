@@ -6227,7 +6227,15 @@ header {
   margin-top: -20px;
 }
 .PluginsContainer .PluginsList {
-  padding: 40px 0;
+  padding: 40px 0 50px;
+}
+.PluginsContainer .PluginsList h2 {
+  border-top: 1px solid #bdc5c8;
+  padding-top: 50px;
+}
+.PluginsContainer .PluginsList h2:first-child {
+  padding-top: none;
+  border-top: none;
 }
 .headline {
   margin: 40px 0 40px 0;
@@ -6246,6 +6254,17 @@ header {
   text-shadow: 0 1px 1px #FFF;
   margin: 20px 0 10px;
   display: block;
+  position: relative;
+}
+.more .weloveourdevelopers .heart:before {
+  content: "♥";
+  display: inline-block;
+  top: -40px;
+  line-height: 20px;
+  height: 50px;
+  z-index: 9000;
+  background: #0cf;
+  position: absolute;
 }
 .more .developerswork {
   display: inline-block;
