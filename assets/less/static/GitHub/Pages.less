@@ -1,0 +1,144 @@
+header {
+    padding: 80px 0 100px;
+    //border-bottom: 1px solid @ci-grey3;
+}
+
+.PluginsContainer {
+
+    background:@ci-grey6;
+    border: 1px solid @borderColor;
+    padding-top: 0px;
+    height:510px;
+    overflow:hidden;
+
+    .weloveourdevelopers {
+        color:@ci-grey4;
+        font-size: 20px;
+        line-height: 40px;
+        height:40px;
+        font-weight: 500;
+        text-shadow: 0 1px 1px #FFF;
+        margin: 20px 0;
+        display:block;
+        position:relative;
+        //background:#0cf;
+        text-align: center;
+        .heart:before{
+            content: "♥";
+            display:inline-block;
+            top:-40px;
+            line-height: 20px;
+            height:50px;
+            z-index: 9000;
+            background:#0cf;
+            position:absolute;
+        }
+    }
+
+    .Plugin {
+        background:@white;
+        border:1px solid @borderColor;
+        .box-sizing(border-box);
+        height:350px;
+        padding: 40px 40px;
+        position:relative;
+        z-index: 8999; //almost 9000
+
+        .border-radius(@radius);
+        .transition(box-shadow 500ms ease);
+
+        h1 {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            margin:0 0 6px 0;
+        }
+
+        p {
+            color:@ci-grey4;
+            display:block;
+            font-size: 15px;
+            line-height: 20px;
+            min-height: 100px;
+
+            &.image {
+                min-height: auto;
+                text-align: center;
+            }
+
+            &.download {
+                text-align: center;
+            }
+
+        }
+
+
+        &:hover {
+            .box-shadow(0 0 10px 0px rgba(0, 0, 0, 0.2));
+            .transition(all 200ms ease);
+            margin-top: -20px;
+        }
+    }
+
+    .PluginsList {
+        //background: #0cf;
+        padding:40px 0 50px;
+
+        h2 {
+            border-top:1px solid @borderColor;
+            padding-top: 50px;
+            &:first-child{
+                padding-top: none;
+                border-top: none;
+            }
+        }
+
+    }
+
+
+
+}
+
+.headline {
+    margin: 40px 0 40px 0;
+}
+
+//Scrolldown
+
+.more{
+    margin-top: 24px;
+    width: 140px;
+}
+
+.giflove:hover {
+    cursor: pointer;
+    .herzchen {
+        color:red;
+    }
+}
+
+footer#Footer {
+    margin-top: 100px;
+    min-height: 300px;
+    border-top:1px solid @ci-grey1;
+    background:@ci-grey2;
+    #FooterLogo {
+        padding:90px 0 30px;
+        img {
+            margin:0 20px;
+        }
+    }
+    #Legal {
+        color:@ci-grey3;
+        a {
+            color:@ci-grey3;
+            font-size: 12px;
+            margin:12px;
+            .transition(all 2000ms ease);
+            &:hover{
+                color:@ci-grey4;
+                .transition(all 200ms ease);
+            }
+        }
+    }
+}
