@@ -1,4 +1,4 @@
-Paymill on GitHub
+PAYMILL on GitHub
 =================
 
 Welcome to our page on paymill.github.io! Follow us on <a href="https://twitter.com/paymill" title="PAYMILL Twitter" target="_blank">Twitter</a> or visit our corporate <a href="https://blog.paymill.com" title="PAYMILL Blog" target="_blank">blog</a>.
