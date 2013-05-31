@@ -1,18 +1,24 @@
 PAYMILL on GitHub
 =================
 
-Welcome to our page on paymill.github.io! Follow us on <a href="https://twitter.com/paymill" title="PAYMILL Twitter" target="_blank">Twitter</a> or visit our corporate <a href="https://blog.paymill.com" title="PAYMILL Blog" target="_blank">blog</a>.
+Welcome to our page on paymill.github.io! Follow us on [Twitter][1] or visit our corporate [blog][2].
 
-<strong>Feel free to hack on our products and <a href="mailto:support@paymill.de">get in touch with us</a>:<strong>
+**Feel free to hack on our products and [get in touch with us][3]:**
 
-<ul>
-<li><a href="https://paymill.github.com" title="Github.io" target="_blank">paymill.github.com</a></li>
-<li><a href="https://paymill.github.io" title="Github.io" target="_blank">paymill.github.io</a></li>
-</ul>
+- [paymill.github.com][4]
+- [paymill.github.io][5]
 
-<quote>Be social and code what could other people help out. Of course we're gonna mention you on our site and make a blog post about that too. 
-We're always <strong>looking for talented developers</strong> who want to join PAYMILL. Maybe you're the next one?</quote>
+Be social and code what could other people help out. Of course we're gonna mention you on our site and make a blog post about that too. 
+We're always **looking for talented developers** who want to join PAYMILL. Maybe you're the next one?
 
-And yes, we &hearts; <a href="http://i.imgur.com/lK0u8HS.gif" title="PAYMILL gifs" target="_blank">animated gifs</a> as you do out there.
+
+And yes, we &hearts; [animated gifs][6] as you do out there.
 
 Your PAYMILL Developer Team!
+
+[1]: https://twitter.com/paymill
+[2]: https://blog.paymill.com
+[3]: mailto:support@paymill.de
+[4]: http://paymill.github.com
+[5]: http://paymill.github.io
+[6]: http://i.imgur.com/lK0u8HS.gif
