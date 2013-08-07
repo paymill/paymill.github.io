@@ -6237,6 +6237,7 @@ header {
 }
 .PluginsContainer .Plugin p.download {
   text-align: center;
+  min-height: 0px;
 }
 .PluginsContainer .Plugin:hover {
   -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
