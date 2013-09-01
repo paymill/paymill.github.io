@@ -5,7 +5,6 @@ Welcome to our page on paymill.github.io! Follow us on [Twitter][1] or visit our
 
 **Feel free to hack on our products and [get in touch with us][3]:**
 
-- [paymill.github.com][4]
 - [paymill.github.io][5]
 
 Be social and code what could other people help out. Of course we're gonna mention you on our site and make a blog post about that too. 
@@ -19,6 +18,5 @@ Your PAYMILL Developer Team!
 [1]: https://twitter.com/paymill
 [2]: https://blog.paymill.com
 [3]: mailto:support@paymill.de
-[4]: http://paymill.github.com
 [5]: http://paymill.github.io
 [6]: http://i.imgur.com/lK0u8HS.gif
