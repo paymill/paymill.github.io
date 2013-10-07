@@ -6175,7 +6175,7 @@ header {
   background: #dde2e4;
   border: 1px solid #bdc5c8;
   padding-top: 0px;
-  height: 510px;
+  height: 560px;
   overflow: hidden;
 }
 .PluginsContainer .weloveourdevelopers {
@@ -6206,7 +6206,7 @@ header {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 350px;
+  height: 380px;
   padding: 40px 40px;
   position: relative;
   z-index: 8999;
@@ -6303,6 +6303,14 @@ footer#Footer #Legal a:hover {
   -moz-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
+}
+.label-grey,
+.badge-grey {
+  background-color: #424a4d;
+}
+.label-grey[href],
+.badge-grey[href] {
+  background-color: #2a3032;
 }
 /** {
     font-family: 'SourceSansPro', 'Helvetica', sans-serif;

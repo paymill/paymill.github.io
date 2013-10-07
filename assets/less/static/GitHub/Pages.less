@@ -8,7 +8,7 @@ header {
     background:@ci-grey6;
     border: 1px solid @borderColor;
     padding-top: 0px;
-    height:510px;
+    height:560px;
     overflow:hidden;
 
     .weloveourdevelopers {
@@ -39,7 +39,7 @@ header {
         background:@white;
         border:1px solid @borderColor;
         .box-sizing(border-box);
-        height:350px;
+        height:380px;
         padding: 40px 40px;
         position:relative;
         z-index: 8999; //almost 9000
@@ -142,4 +142,9 @@ footer#Footer {
             }
         }
     }
+}
+.label,
+.badge {
+  &-grey         { background-color: @ci-grey2; }
+  &-grey[href]   { background-color: darken(@ci-grey2, 10%); }
 }
