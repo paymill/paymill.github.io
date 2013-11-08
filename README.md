@@ -1,7 +1,8 @@
-PAYMILL on GitHub
-=================
+PAYMILL Libraries & Extensions
+==============================
 
-Welcome to our page on paymill.github.io! Follow us on [Twitter][1] or visit our corporate [blog][2].
+Welcome to our page on paymill.github.io, where we open-source our libraries and extensions! <br />
+Follow us on [Twitter][1] or visit our corporate [blog][2].
 
 **Feel free to hack on our products and [get in touch with us][3]:**
 
