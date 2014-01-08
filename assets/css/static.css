@@ -6219,6 +6219,12 @@ header {
   -moz-transition: box-shadow 500ms ease;
   -o-transition: box-shadow 500ms ease;
   transition: box-shadow 500ms ease;
+  /* &:hover {
+            .box-shadow(0 0 10px 0px rgba(0, 0, 0, 0.2));
+            .transition(all 200ms ease);
+            margin-top: -20px;
+        }*/
+
 }
 .PluginsContainer .Plugin h1 {
   font-size: 20px;
@@ -6240,16 +6246,6 @@ header {
 .PluginsContainer .Plugin p.download {
   text-align: center;
   min-height: 0px;
-}
-.PluginsContainer .Plugin:hover {
-  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-  margin-top: -20px;
 }
 .PluginsContainer .PluginsList {
   padding: 40px 0 50px;
@@ -6313,6 +6309,9 @@ footer#Footer #Legal a:hover {
 .label-grey[href],
 .badge-grey[href] {
   background-color: #2a3032;
+}
+a.tip {
+  margin-top: -20px !important;
 }
 /** {
     font-family: 'SourceSansPro', 'Helvetica', sans-serif;
